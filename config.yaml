@@ -1,0 +1,65 @@
+
+# Seu @ do tiktok:
+tiktok_user: "@..."
+
+# IP e Porta de RCON do servidor:
+# Porta de RCON não é a mesma porta do servidor - tá lá no server.properties
+host: '0.0.0.0'
+port: 00000
+
+## ## ##
+
+# Configurei as mensagens do chat usando o plugin "AnnoucerPlus",
+# Ele precisa do Vault pra rodar.
+
+# Pra spawnar com o nome do user use:
+# summon minecraft:MOB ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}
+
+## ## ##
+
+# Quantidade de likes pra ativar os comando:
+likes: True # Ativa ou desativa o módulo
+quantidade_likes: 300
+cmd_like:
+  - 'ap broadcast all <green><b>{name} curtiu 300 vezes<reset><yellow> e spawnou um Zumbi!'
+  - 'execute at the_gay_ run summon minecraft:zombie ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
+
+
+# Compartilhar live (1 por user):
+share: True # Ativa ou desativa o módulo
+cmd_share:
+  - 'ap broadcast all <green><b>{name} compartilhou<reset><yellow> a live e spawnou um Allay!'
+  - 'execute at the_gay_ run summon minecraft:allay ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
+
+
+# Comentários
+comment: True # Ativa ou desativa o módulo
+cmd_comment:
+  - 'ap broadcast all <gold><bold>[<yellow>{name}<gold>]<reset> {comment}'
+
+
+# Seguir (1 por user):
+follow: True # Ativa ou desativa o módulo
+cmd_follow:
+  - 'ap broadcastactionbar all 3 <gold><bold>{name}<reset><yellow>, obrigado por seguir! Tome uma raposa!'
+  - 'execute at the_gay_ run summon minecraft:fox ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
+
+
+# Site com os IDs de cada presente:
+# https://streamdps.com/tiktok-widgets/gifts/?br=1
+# Alguns vão estar nas páginas de outros países, mas funcionam normal.
+
+# Presentes:
+gift: True # Ativa ou desativa o módulo
+presentes:
+  - id: 5655
+    cmd:
+      - 'ap broadcastbossbar all 3 progress drain yellow <gold><bold>{name} <yellow>deu uma rosa e spawnou um creeper!'
+      - 'execute at the_gay_ run summon minecraft:creeper ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
+  - id: 6652
+    cmd:
+      - 'ap broadcastbossbar all 3 progress drain yellow <gold><bold>{name} <yellow>deu um raio e spawnou um esqueleto!'
+      - 'execute at the_gay_ run summon minecraft:skeleton ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
+  #- id: Adicione quantos quiser.
+  #  cmd:
+  #    - 'E quantos comandos quiser'
