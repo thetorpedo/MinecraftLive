@@ -22,8 +22,8 @@ async def on_connect(_: ConnectEvent):
     rcon = RCONClient(HOST, port=PORT)
 
     # Logar no RCON
-    if not rcon.login("babalu"):
-        print("RCON não foi conectado, confira o IP, Porta e Senha!")
+    if not rcon.login(config['senha']):
+        print("RCON não foi conectado, confira a senha!")
         sys.exit()
 
     tabelaPresentes = {}

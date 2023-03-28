@@ -2,10 +2,11 @@
 # Seu @ do tiktok:
 tiktok_user: "@..."
 
-# IP e Porta de RCON do servidor:
+# IP, Porta de RCON, e senha:
 # Porta de RCON não é a mesma porta do servidor - tá lá no server.properties
 host: '0.0.0.0'
 port: 00000
+senha: 'senha'
 
 ## ## ##
 
