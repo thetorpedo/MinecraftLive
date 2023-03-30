@@ -7,7 +7,7 @@ This is one of my first projects (if you can call it that), and it's basically j
 
 ## Installation
 
- 1. Download the **MinecraftLive.zip** from the [latest release](github.com/thetorpedo/MinecraftLive/releases/latest).
+ 1. Download the **MinecraftLive.zip** from the [latest release](https://github.com/thetorpedo/MinecraftLive/releases/latest).
  2. Extract the archive.
  3. Edit the **config.yaml** with a text editor. *(e.g. Notepad)*
  4. Run the **MinecraftLive.exe** on the same directory as the **config.yaml**.
