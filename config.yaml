@@ -1,66 +1,56 @@
 
-# Seu @ do tiktok:
+# Your tiktok @user:
 tiktok_user: "@..."
 
-# IP, Porta de RCON, e senha:
-# Porta de RCON não é a mesma porta do servidor - tá lá no server.properties
+# Server IP, RCON port and password
+# All of these can be found on your server.properties
 host: '0.0.0.0'
 port: 00000
-senha: 'senha'
+senha: 'password'
 
-## ## ##
 
-# Configurei as mensagens do chat usando o plugin "AnnoucerPlus",
-# Ele precisa do Vault pra rodar.
-
-# Pra spawnar com o nome do user use:
-# summon minecraft:MOB ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}
-
-## ## ##
-
-# Quantidade de likes pra ativar os comando:
-likes: True # Ativa ou desativa o módulo
-quantidade_likes: 300
+# Likes
+likes: True # Activates or deactivates this module
+quantidade_likes: 300 # Number of likes required to run the command
 cmd_like:
-  - 'ap broadcast all <green><b>{name} curtiu 300 vezes<reset><yellow> e spawnou um Zumbi!'
-  - 'execute at the_gay_ run summon minecraft:zombie ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
+  - 'say {name} sent 300 likes!'
+  - 'execute at @a run summon minecraft:zombie ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
 
 
-# Compartilhar live (1 por user):
-share: True # Ativa ou desativa o módulo
+# Share (1 per user):
+share: True # Activates or deactivates this module
 cmd_share:
-  - 'ap broadcast all <green><b>{name} compartilhou<reset><yellow> a live e spawnou um Allay!'
-  - 'execute at the_gay_ run summon minecraft:allay ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
+  - 'say {name} shared the live!'
+  - 'execute at @a run summon minecraft:allay ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
 
 
-# Comentários
-comment: True # Ativa ou desativa o módulo
+# Comments
+comment: True # Activates or deactivates this module
 cmd_comment:
-  - 'ap broadcast all <gold><bold>[<yellow>{name}<gold>]<reset> {comment}'
+  - 'say {name}: {comment}'
 
 
-# Seguir (1 por user):
-follow: True # Ativa ou desativa o módulo
+# Follow (1 per user):
+follow: True # Activates or deactivates this module
 cmd_follow:
-  - 'ap broadcastactionbar all 3 <gold><bold>{name}<reset><yellow>, obrigado por seguir! Tome uma raposa!'
-  - 'execute at the_gay_ run summon minecraft:fox ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
+  - 'say {}'
+  - 'execute at @a run summon minecraft:fox ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
 
 
-# Site com os IDs de cada presente:
-# https://streamdps.com/tiktok-widgets/gifts/?br=1
-# Alguns vão estar nas páginas de outros países, mas funcionam normal.
+# Website with all the IDs
+# https://streamdps.com/tiktok-widgets/gifts
 
-# Presentes:
-gift: True # Ativa ou desativa o módulo
+# Gifts:
+gift: True # Activates or deactivates this module
 presentes:
   - id: 5655
     cmd:
-      - 'ap broadcastbossbar all 3 progress drain yellow <gold><bold>{name} <yellow>deu uma rosa e spawnou um creeper!'
-      - 'execute at the_gay_ run summon minecraft:creeper ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
+      - 'say {name} sent a Rose!'
+      - 'execute at @a run summon minecraft:creeper ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
   - id: 6652
     cmd:
-      - 'ap broadcastbossbar all 3 progress drain yellow <gold><bold>{name} <yellow>deu um raio e spawnou um esqueleto!'
-      - 'execute at the_gay_ run summon minecraft:skeleton ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
-  #- id: Adicione quantos quiser.
+      - 'say {name} sent a Lightning Bolt!'
+      - 'execute at @a run summon minecraft:skeleton ~ ~ ~ {{CustomName:"\"{name}\"",CustomNameVisible:1b}}'
+  #- id: Add as many as you want.
   #  cmd:
-  #    - 'E quantos comandos quiser'
+  #    - 'And as many commands as you want'
